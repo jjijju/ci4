@@ -1,22 +1,22 @@
 <?php namespace App\Controllers;
 
-use App\Models\MainModel;
+// use App\Models\MainModel;
 use CodeIgniter\Controller;
 
 class Main extends Controller
 {
 	public function index()
 	{
-		$model = new MainModel();
+		// $model = new MainModel();
 
-		$data = [
-			'title' => "로그인 사용자",
-			'list' => $model->getData('member')
-		];
+		// $data = [
+		// 	'title' => "로그인 사용자",
+		// 	'list' => $model->getData('member')
+		// ];
 
-		echo "<xmp>";
-		print_r($data);
-		echo "</xmp>";
+		// echo "<xmp>";
+		// print_r($data);
+		// echo "</xmp>";
 
 		/*
 [
@@ -33,6 +33,6 @@ class Main extends Controller
 
 		// print_r($data);
 
-		echo view('main', $data);
+		echo view('main');
 	}
 }

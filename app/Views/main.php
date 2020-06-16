@@ -1,3 +1,2 @@
-<div class="ui segment">
-	<h3 class="ui header"><?=esc($title)?></h3>
-</div>
+<div id="app"></div>
+<script src="dist/main.js" charset="utf-8"></script>
