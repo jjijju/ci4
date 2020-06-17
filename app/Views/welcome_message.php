@@ -265,6 +265,10 @@
 
 		</div>
 
+		<div id="root"></div>
+		<script src="dist/app.js" charset="utf-8"></script>
+
+
 	</header>
 
 	<!-- CONTENT -->

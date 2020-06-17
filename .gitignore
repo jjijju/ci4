@@ -126,8 +126,9 @@ nb-configuration.xml
 /phpunit*.xml
 /.phpunit.*.cache
 
-docker-compose.yml
+# docker
 /phpdocker
+docker*.yml
 
 # dependencies
 /node_modules
