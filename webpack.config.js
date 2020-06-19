@@ -25,10 +25,10 @@ module.exports = (env, argv) => {
 			chunkFilename: argv.mode === 'development' ? '[id].js' : '[id]_[chunkhash].js',
 		},
 		resolve: {
-			extensions: ['.ts', '.tsx', '.js', '.json', '.css'],
+			modules: [path.join(__dirname, 'src'), 'node_modules'],
+			extensions: ['.ts', '.tsx', '.js', '.json'],
 			alias: {
-				Component: path.resolve(__dirname, 'src/component/'),
-				Lib: path.resolve(__dirname, 'src/lib/'),
+				component: path.resolve(__dirname, 'src/component'),
 			},
 		},
 		optimization: {
@@ -109,16 +109,16 @@ module.exports = (env, argv) => {
 		];
 	}
 
-	// if (env.prettier) {
-	// 	config.plugins.unshift(new WebpackStylish());
-	// 	config.plugins.unshift(new FriendlyErrors());
+	if (env.prettier) {
+		config.plugins.unshift(new WebpackStylish());
+		config.plugins.unshift(new FriendlyErrors());
 
-	// 	config.stats = 'none';
-	// }
+		config.stats = 'none';
+	}
 
-	// if (env.stats) {
-	// 	config.plugins.push(new WebpackVisualizer());
-	// }
+	if (env.stats) {
+		config.plugins.push(new WebpackVisualizer());
+	}
 
 	return config;
 };
